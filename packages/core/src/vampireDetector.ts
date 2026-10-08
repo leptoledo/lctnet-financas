@@ -370,7 +370,7 @@ export class VampireDetectorEngine {
     // 7. Avaliação e Nota
     const { grade, summary } = this.evaluateHealth(
       totalMonthlyDrain,
-      subs.count ?? subs.length,
+      subs.length,
       priceHikes.length,
       inflation.overallRatePercent
     );
