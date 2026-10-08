@@ -9,15 +9,16 @@
   ],
   "scripts": {
     "dev": "npm run dev:app",
-    "dev:app": "python3 -m http.server 3000 -d apps/app/public",
+    "dev:app": "npm run dev --workspace=@financas/app",
     "dev:landing": "python3 -m http.server 3001 -d apps/landing/public",
-    "dev:all": "python3 -m http.server 8080",
+    "dev:fallback": "python3 -m http.server 3000 -d apps/app/public",
     "start": "npm run dev",
     "build": "npm run build --workspaces",
-    "build:app": "npm run build --workspace=apps/app",
+    "build:app": "npm run build --workspace=@financas/app",
     "build:landing": "npm run build --workspace=apps/landing",
     "cap:android": "cd apps/app && npx cap open android",
-    "cap:sync": "cd apps/app && npx cap sync"
+    "cap:sync": "cd apps/app && npx cap sync",
+    "git:push": "bash push-github.sh"
   },
   "keywords": [
     "finance",
