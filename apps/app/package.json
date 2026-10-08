@@ -1,0 +1,19 @@
+{
+  "name": "@financas/app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicação Financeira Multiplataforma (Web & Android com Capacitor)",
+  "scripts": {
+    "dev": "python3 -m http.server 3000 -d public",
+    "build": "echo 'App build ready'",
+    "cap:sync": "cap sync",
+    "cap:android": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.0",
+    "@capacitor/cli": "^6.1.0",
+    "@capacitor/core": "^6.1.0",
+    "@financas/core": "file:../../packages/core",
+    "@financas/ui": "file:../../packages/ui"
+  }
+}

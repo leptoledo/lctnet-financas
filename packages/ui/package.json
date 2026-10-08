@@ -1,0 +1,14 @@
+{
+  "name": "@financas/ui",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "private": true,
+  "description": "Design System, tokens de cores e componentes visuais compartilhados",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}

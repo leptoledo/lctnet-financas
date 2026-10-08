@@ -1,0 +1,71 @@
+Data,Nome,Tipo,Categoria,Valor,Notas
+01/03/2026,Salário março,Receita,Salário,6500.00,
+03/03/2026,Supermercado Extra,Despesa,Alimentação,320.50,Compra mensal
+05/03/2026,Uber trabalho,Despesa,Transporte,38.90,
+06/03/2026,Aluguel março,Despesa,Moradia,1800.00,
+07/03/2026,Plano de saúde,Despesa,Saúde,320.00,
+08/03/2026,Farmácia,Despesa,Saúde,87.40,Vitaminas e suplementos
+10/03/2026,Curso Swift,Despesa,Educação,197.00,
+12/03/2026,Conta de luz,Despesa,Serviços essenciais,145.30,
+12/03/2026,Conta de água,Despesa,Serviços essenciais,62.80,
+13/03/2026,Netflix,Despesa,Lazer,55.90,
+14/03/2026,Spotify,Despesa,Lazer,21.90,
+15/03/2026,iFood Sábado,Despesa,Alimentação,72.00,Jantar em família
+17/03/2026,Camiseta Reserva,Despesa,Vestuário,159.00,
+18/03/2026,Seguro carro,Despesa,Seguros,210.00,
+19/03/2026,Internet,Despesa,Serviços essenciais,99.90,
+20/03/2026,Rendimentos CDB,Receita,Rendimentos,230.00,CDB Nubank
+21/03/2026,Gasolina,Despesa,Transporte,180.00,
+22/03/2026,Presente aniversário,Despesa,Presente,150.00,Presente para Ana
+25/03/2026,Reembolso viagem,Receita,Reembolso,350.00,Empresa reembolsou viagem
+26/03/2026,Restaurante almoço,Despesa,Alimentação,64.00,Almoço com cliente
+28/03/2026,Academia,Despesa,Saúde,99.90,
+29/03/2026,Padaria,Despesa,Alimentação,28.50,
+31/03/2026,Cartão crédito fatura,Despesa,Crédito,420.00,Fatura março
+01/04/2026,Salário abril,Receita,Salário,6500.00,
+02/04/2026,Supermercado Pão de Açúcar,Despesa,Alimentação,410.80,Compra quinzenal
+03/04/2026,Aluguel abril,Despesa,Moradia,1800.00,
+04/04/2026,99 corrida,Despesa,Transporte,29.70,
+05/04/2026,Dentista,Despesa,Saúde,280.00,Limpeza e consulta
+07/04/2026,Livros programação,Despesa,Educação,89.90,Livro Clean Architecture
+08/04/2026,Renda freelance,Receita,Renda,1200.00,Projeto app iOS
+10/04/2026,Conta de luz,Despesa,Serviços essenciais,138.60,
+10/04/2026,Condomínio,Despesa,Moradia,450.00,
+12/04/2026,Netflix,Despesa,Lazer,55.90,
+12/04/2026,Spotify,Despesa,Lazer,21.90,
+13/04/2026,Calça jeans,Despesa,Vestuário,219.00,
+14/04/2026,Gasolina,Despesa,Transporte,165.00,
+15/04/2026,iFood almoço,Despesa,Alimentação,45.00,
+16/04/2026,Transferência para poupança,Despesa,Transferências,500.00,Reserva mensal
+17/04/2026,Seguro vida,Despesa,Seguros,85.00,
+19/04/2026,Farmácia,Despesa,Saúde,43.20,
+20/04/2026,Rendimentos poupança,Receita,Rendimentos,45.00,
+21/04/2026,Empréstimo parcela,Despesa,Empréstimo,380.00,Parcela 6/24
+22/04/2026,Restaurante jantar,Despesa,Alimentação,118.00,Aniversário
+24/04/2026,Internet,Despesa,Serviços essenciais,99.90,
+25/04/2026,Cinema,Despesa,Lazer,80.00,Família
+26/04/2026,Doação ONG,Despesa,Doação,100.00,Ação Social
+28/04/2026,Mesada filho,Despesa,Mesada para crianças,200.00,
+30/04/2026,Cartão crédito fatura,Despesa,Crédito,680.00,Fatura abril
+01/05/2026,Salário maio,Receita,Salário,6500.00,
+02/05/2026,Supermercado Extra,Despesa,Alimentação,378.20,
+03/05/2026,Aluguel maio,Despesa,Moradia,1800.00,
+05/05/2026,Conta de luz,Despesa,Serviços essenciais,156.40,
+05/05/2026,Conta de água,Despesa,Serviços essenciais,71.00,
+06/05/2026,Gasolina,Despesa,Transporte,190.00,
+07/05/2026,Academia,Despesa,Saúde,99.90,
+08/05/2026,Netflix,Despesa,Lazer,55.90,
+08/05/2026,Spotify,Despesa,Lazer,21.90,
+09/05/2026,Curso design,Despesa,Educação,249.00,Curso UX/UI
+10/05/2026,Renda freelance,Receita,Renda,800.00,Consultoria
+11/05/2026,iFood jantar,Despesa,Alimentação,92.00,
+12/05/2026,Seguro carro,Despesa,Seguros,210.00,
+13/05/2026,Internet,Despesa,Serviços essenciais,99.90,
+14/05/2026,Farmácia,Despesa,Saúde,61.50,
+15/05/2026,Venda notebook usado,Receita,Vendas líquidas,1800.00,Notebook antigo OLX
+15/05/2026,Empréstimo parcela,Despesa,Empréstimo,380.00,Parcela 7/24
+16/05/2026,Tenis Nike,Despesa,Vestuário,399.00,
+17/05/2026,Presente Dia das Mães,Despesa,Presente,280.00,
+18/05/2026,Rendimentos CDB,Receita,Rendimentos,310.00,
+19/05/2026,Almoço restaurante,Despesa,Alimentação,58.00,
+19/05/2026,Condomínio,Despesa,Moradia,450.00,

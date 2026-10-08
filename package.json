@@ -1,0 +1,35 @@
+{
+  "name": "financas-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo escalável do ecossistema Finanças (Web, Android, iOS e Landing Page)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:app",
+    "dev:app": "python3 -m http.server 3000 -d apps/app/public",
+    "dev:landing": "python3 -m http.server 3001 -d apps/landing/public",
+    "dev:all": "python3 -m http.server 8080",
+    "start": "npm run dev",
+    "build": "npm run build --workspaces",
+    "build:app": "npm run build --workspace=apps/app",
+    "build:landing": "npm run build --workspace=apps/landing",
+    "cap:android": "cd apps/app && npx cap open android",
+    "cap:sync": "cd apps/app && npx cap sync"
+  },
+  "keywords": [
+    "finance",
+    "fintech",
+    "monorepo",
+    "nextjs",
+    "react",
+    "capacitor",
+    "supabase",
+    "android",
+    "ios"
+  ],
+  "author": "Leandro Toledo",
+  "license": "MIT"
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finanças - Ecossistema Multiplataforma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0B0F19] text-gray-100 min-h-screen flex items-center justify-center p-6 select-none font-sans">
+  <div class="max-w-xl w-full p-8 rounded-3xl bg-white/[0.03] border border-white/10 shadow-2xl backdrop-blur-xl space-y-6 text-center">
+    
+    <div class="inline-flex w-16 h-16 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 items-center justify-center text-3xl shadow-lg shadow-blue-500/25">
+      💰
+    </div>
+
+    <div>
+      <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">Ecossistema Monorepo</span>
+      <h1 class="text-2xl md:text-3xl font-extrabold text-white mt-1">Finanças Multiplataforma</h1>
+      <p class="text-sm text-gray-400 mt-2">Escolha qual aplicação deseja acessar localmente:</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left pt-2">
+      <!-- Card App -->
+      <a href="apps/app/public/index.html" class="p-5 rounded-2xl bg-gradient-to-b from-blue-600/10 to-transparent border border-blue-500/30 hover:border-blue-400 transition-all group hover:scale-[1.02] block">
+        <div class="flex items-center justify-between">
+          <span class="text-2xl">📱</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300">Blocos 1-4</span>
+        </div>
+        <h3 class="font-bold text-base text-white mt-3 group-hover:text-blue-300 transition">Aplicativo Web & Mobile</h3>
+        <p class="text-xs text-gray-400 mt-1">Dashboard, Efeito Borboleta, Drenos & Inflação, Faturas, Parcelamentos e Metas CDI.</p>
+        <span class="inline-block mt-3 text-xs font-semibold text-blue-400">Abrir App →</span>
+      </a>
+
+      <!-- Card Landing Page -->
+      <a href="apps/landing/public/index.html" class="p-5 rounded-2xl bg-gradient-to-b from-purple-600/10 to-transparent border border-purple-500/30 hover:border-purple-400 transition-all group hover:scale-[1.02] block">
+        <div class="flex items-center justify-between">
+          <span class="text-2xl">🚀</span>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300">Alta Conversão</span>
+        </div>
+        <h3 class="font-bold text-base text-white mt-3 group-hover:text-purple-300 transition">Landing Page Oficial</h3>
+        <p class="text-xs text-gray-400 mt-1">Página de vendas premium com mockup 3D interativo, planos e badges iOS/Android.</p>
+        <span class="inline-block mt-3 text-xs font-semibold text-purple-400">Abrir Landing Page →</span>
+      </a>
+    </div>
+
+    <div class="pt-4 border-t border-white/5 text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span>Capacitor 6 • TypeScript • Supabase</span>
+      <span class="text-gray-400">Porta Padrão: <code>3000</code> / <code>8080</code></span>
+    </div>
+
+  </div>
+</body>
+</html>

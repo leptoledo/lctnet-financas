@@ -1,0 +1,17 @@
+{
+  "name": "@financas/core",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "private": true,
+  "description": "Lógica de negócio compartilhada, tipos, cálculos financeiros e cliente Supabase",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}
