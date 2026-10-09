@@ -16,8 +16,8 @@ git add .
 if git diff-index --quiet HEAD --; then
   echo "ℹ️ Nenhuma alteração pendente para commit."
 else
-  echo "💾 Criando commit com novo design NexuHR e correções..."
-  git commit -m "feat(landing): redesign completo com layout, paleta de cores e tipografia estilo NexuHR + fix tsc"
+  echo "💾 Criando commit com novo design NexuHR, roteamento raiz/app e correções..."
+  git commit -m "feat: landing page NexuHR na raiz / e web app em /app + fix build tsc"
 fi
 
 # 4. Enviar para o repositório remoto
