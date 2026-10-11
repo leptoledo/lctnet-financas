@@ -1,7 +1,7 @@
 {
   "appId": "com.lctnet.financas",
   "appName": "Finanças",
-  "webDir": "dist",
+  "webDir": "dist/app",
   "bundledWebRuntime": false,
   "server": {
     "androidScheme": "https",

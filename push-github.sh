@@ -5,8 +5,8 @@ echo "🚀 Iniciando faxina e sincronização com o GitHub..."
 
 # 1. Remover arquivos e pastas legadas que infacionam HTML/JS antigo no GitHub
 echo "🧹 Removendo pastas legadas e duplicatas (app, app-web-android, landing-page, public legado)..."
-git rm -rf --ignore-unmatch app app-web-android landing-page apps/app/public/index.html apps/app/public/app.js apps/app/public/style.css 2>/dev/null || true
-rm -rf app app-web-android landing-page apps/app/public/index.html apps/app/public/app.js apps/app/public/style.css 2>/dev/null || true
+git rm -rf --ignore-unmatch app app-web-android landing-page apps/app/public/index.html apps/app/public/app.js apps/app/public/style.css index.html 2>/dev/null || true
+rm -rf app app-web-android landing-page apps/app/public/index.html apps/app/public/app.js apps/app/public/style.css index.html 2>/dev/null || true
 
 # 2. Adicionar os novos arquivos React 18, TypeScript e configurações
 echo "📦 Adicionando arquivos modernos do monorepo..."
@@ -16,8 +16,8 @@ git add .
 if git diff-index --quiet HEAD --; then
   echo "ℹ️ Nenhuma alteração pendente para commit."
 else
-  echo "💾 Criando commit com novo design NexuHR, roteamento raiz/app e correções..."
-  git commit -m "feat: landing page NexuHR na raiz / e web app em /app + fix build tsc"
+  echo "💾 Criando commit com suporte a Vercel (apps/app e raiz)..."
+  git commit -m "feat: landing page na raiz e app em /app compatível com Vercel apps/app"
 fi
 
 # 4. Enviar para o repositório remoto

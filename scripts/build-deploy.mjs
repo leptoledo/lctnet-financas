@@ -16,22 +16,21 @@ if (fs.existsSync(distDir)) {
 }
 fs.mkdirSync(distDir, { recursive: true });
 
-// 2. Copiar Landing Page para a raiz de dist/ (para responder na rota /)
-if (fs.existsSync(landingPublicDir)) {
-  fs.cpSync(landingPublicDir, distDir, { recursive: true });
-  console.log('✅ Landing Page copiada para dist/ (rota principal /)');
+// 2. Se apps/app/dist já tem a estrutura unificada, copiar diretamente
+if (fs.existsSync(appDistDir)) {
+  fs.cpSync(appDistDir, distDir, { recursive: true });
+  console.log('✅ Estrutura unificada copiada de apps/app/dist para dist/');
 } else {
-  console.error('❌ Diretório da Landing Page não encontrado:', landingPublicDir);
+  // Fallback caso apps/app/dist ainda não tenha rodado
+  if (fs.existsSync(landingPublicDir)) {
+    fs.cpSync(landingPublicDir, distDir, { recursive: true });
+    console.log('✅ Landing Page copiada para dist/ (rota principal /)');
+  }
 }
 
-// 3. Copiar App React compilado para dist/app/ (para responder na rota /app)
-const appTargetDir = path.join(distDir, 'app');
-if (fs.existsSync(appDistDir)) {
-  fs.mkdirSync(appTargetDir, { recursive: true });
-  fs.cpSync(appDistDir, appTargetDir, { recursive: true });
-  console.log('✅ App React 18 copiado para dist/app/ (rota /app)');
-} else {
-  console.error('❌ Diretório compilado do App não encontrado:', appDistDir);
+// 3. Garantir que a Landing Page esteja na raiz de dist/
+if (fs.existsSync(landingPublicDir)) {
+  fs.cpSync(landingPublicDir, distDir, { recursive: true });
 }
 
 console.log('✨ Build de produção pronto para a Vercel:');
