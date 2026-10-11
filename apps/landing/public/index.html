@@ -6,7 +6,7 @@
   <title>Finanças - Gestão Financeira Inteligente & Multiplataforma</title>
   
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="Controle seu patrimônio, ritmo de gastos, compras parceladas e modo casal com inteligência preditiva no iOS, Android e Web." />
+  <meta name="description" content="Controle seu patrimônio, ritmo de gastos, efeito borboleta e modo casal com inteligência preditiva no iOS, Android e Web." />
 
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,28 +19,21 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Styles NexuHR / NexusOS Inspired -->
+  <!-- Custom Styles NexusHR / NexusOS Inspired -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="min-h-screen text-slate-100 selection:bg-[#00E699] selection:text-[#090D16]">
 
-  <!-- BACKGROUND RADIAL GLOWS (Estilo NexuHR) -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[550px] bg-indigo-600/15 rounded-full blur-[150px]"></div>
-    <div class="absolute top-[30%] -left-40 w-[600px] h-[600px] bg-[#00E699]/10 rounded-full blur-[140px]"></div>
-    <div class="absolute top-[65%] -right-40 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[140px]"></div>
-  </div>
-
   <!-- ============================================== -->
-  <!-- TOP ANNOUNCEMENT BADGE                         -->
+  <!-- TOP ANNOUNCEMENT BAR (Estilo Exato NexusHR)    -->
   <!-- ============================================== -->
-  <div class="relative z-50 border-b border-white/5 bg-[#090D16]/90 backdrop-blur-md py-2.5 px-4 text-center text-xs">
+  <div class="relative z-50 border-b border-slate-800/80 bg-[#070A11] py-2 px-4 text-center text-xs">
     <div class="inline-flex items-center gap-2 text-slate-300">
-      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#00E699]/10 text-[#00E699] border border-[#00E699]/20 font-semibold text-[11px]">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-[#00E699] border border-emerald-500/30 font-semibold text-[11px]">
         <span class="w-1.5 h-1.5 rounded-full bg-[#00E699] animate-pulse"></span>
         Novo
       </span>
-      <span>Finanças 2.0 lançado com IA Preditiva, Modo Casal e Ritmo de Gastos</span>
+      <span>Finanças 2.0 com IA Preditiva, Modo Casal e Ritmo de Gastos</span>
       <a href="/app" class="font-semibold text-[#00E699] hover:underline hidden sm:inline-flex items-center gap-1">
         Experimentar agora &rarr;
       </a>
@@ -50,603 +43,791 @@
   <!-- ============================================== -->
   <!-- HEADER / NAVBAR                                -->
   <!-- ============================================== -->
-  <header class="sticky top-0 z-40 nexus-glass border-b border-white/5 px-6 py-4">
+  <header class="sticky top-0 z-40 bg-[#090D16]/95 border-b border-slate-800/80 backdrop-blur-md px-6 py-3.5 transition-all">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <!-- Logo Finanças -->
-      <a href="#" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-violet-600 to-purple-600 flex items-center justify-center text-white font-bold shadow-lg shadow-indigo-500/25">
-          <i data-lucide="wallet" class="w-5 h-5 text-white"></i>
+      <!-- Logo Finanças NexusHR Style -->
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/20 text-[#00E699] border border-emerald-500/40 shadow-[0_0_12px_rgba(0,230,153,0.25)]">
+          <i data-lucide="zap" class="w-4 h-4 text-[#00E699] fill-[#00E699]"></i>
         </div>
-        <div>
-          <span class="font-extrabold text-lg text-white tracking-tight">Finanças</span>
-          <span class="hidden sm:inline-block ml-2 text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/10 text-[#00E699] border border-[#00E699]/20">
-            PRO OS
-          </span>
-        </div>
+        <span class="text-xl font-extrabold tracking-tight text-white">Finanças</span>
+        <span class="hidden sm:inline-block ml-1 text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/10 text-[#00E699] border border-emerald-500/20">
+          PRO OS
+        </span>
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-        <a href="#funcionalidades" class="hover:text-white transition">Funcionalidades</a>
-        <a href="#como-funciona" class="hover:text-white transition">Como Funciona</a>
-        <a href="#precos" class="hover:text-white transition">Preços</a>
-        <a href="#depoimentos" class="hover:text-white transition">Depoimentos</a>
-        <a href="#faq" class="hover:text-white transition">FAQ</a>
+      <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-slate-300">
+        <a href="#funcionalidades" class="rounded-lg px-3 py-2 transition-colors hover:bg-slate-800/60 hover:text-white">Funcionalidades</a>
+        <a href="#como-funciona" class="rounded-lg px-3 py-2 transition-colors hover:bg-slate-800/60 hover:text-white">Como Funciona</a>
+        <a href="#precos" class="rounded-lg px-3 py-2 transition-colors hover:bg-slate-800/60 hover:text-white">Preços</a>
+        <a href="#depoimentos" class="rounded-lg px-3 py-2 transition-colors hover:bg-slate-800/60 hover:text-white">Depoimentos</a>
+        <a href="#faq" class="rounded-lg px-3 py-2 transition-colors hover:bg-slate-800/60 hover:text-white">FAQ</a>
       </nav>
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-3">
-        <a href="/app" class="hidden sm:flex items-center gap-1.5 py-2 px-4 rounded-xl text-xs font-semibold text-slate-200 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition">
-          <i data-lucide="lock" class="w-3.5 h-3.5 text-slate-400"></i>
-          <span>Entrar no App</span>
+        <a href="/app" class="hidden sm:block text-sm font-medium text-slate-300 hover:text-white transition-colors">
+          Entrar no App
         </a>
-        <a href="/app" class="btn-mint-nexus py-2 px-4 rounded-xl text-xs flex items-center gap-1.5 shadow-md">
-          <span>Começar Grátis</span>
+        <a href="/app" class="btn-nexus-mint inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-bold shadow-lg">
+          <span>Começar grátis</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="ml-1 rounded-lg p-2 text-slate-300 hover:bg-slate-800 md:hidden">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-[#090D16] mt-3 py-4 space-y-2">
+      <a href="#funcionalidades" class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800/60">Funcionalidades</a>
+      <a href="#como-funciona" class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800/60">Como Funciona</a>
+      <a href="#precos" class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800/60">Preços</a>
+      <a href="#depoimentos" class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800/60">Depoimentos</a>
+      <a href="#faq" class="block rounded-lg px-4 py-2 text-sm font-medium text-slate-300 hover:bg-slate-800/60">FAQ</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2 px-4">
+        <a href="/app" class="btn-nexus-mint py-2.5 text-center text-sm rounded-lg font-bold">Acessar Web App</a>
       </div>
     </div>
   </header>
 
   <!-- ============================================== -->
-  <!-- HERO SECTION                                   -->
+  <!-- HERO SECTION (100% NexusHR Inspired)           -->
   <!-- ============================================== -->
-  <section class="relative z-10 pt-16 md:pt-24 pb-16 px-6 text-center max-w-5xl mx-auto">
-    <!-- Category Pill -->
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 mb-6 backdrop-blur-md">
-      <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#00E699]"></i>
-      <span class="font-medium">Gestão Financeira & Inteligência Preditiva</span>
+  <section class="relative overflow-hidden px-4 pb-24 pt-16 sm:px-6 lg:px-8 bg-[#090D16] nexus-grid-bg">
+    <!-- Subtle Emerald Glows -->
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 left-1/2 h-[700px] w-[700px] -translate-x-1/2 rounded-full bg-emerald-500/5 blur-3xl"></div>
+      <div class="absolute right-0 top-20 h-[500px] w-[500px] rounded-full bg-teal-500/5 blur-3xl"></div>
     </div>
 
-    <!-- Main Headline -->
-    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6">
-      Suas finanças sob controle com a <span class="gradient-mint-text">inteligência que você merece.</span>
-    </h1>
-
-    <!-- Subtitle -->
-    <p class="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
-      Diga adeus às planilhas lentas e apps cheios de anúncios. O Finanças combina algoritmos preditivos, cálculo de queima orçamentária e divisão no casal em uma experiência visual extraordinária.
-    </p>
-
-    <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-      <a href="/app" class="w-full sm:w-auto btn-primary-nexus py-3.5 px-8 rounded-2xl font-bold text-sm flex items-center justify-center gap-2">
-        <i data-lucide="rocket" class="w-4 h-4 text-white"></i>
-        <span>Experimentar Web App Agora</span>
-        <i data-lucide="arrow-right" class="w-4 h-4 text-white"></i>
-      </a>
-
-      <a href="#funcionalidades" class="w-full sm:w-auto py-3.5 px-7 rounded-2xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 font-semibold text-sm transition flex items-center justify-center gap-2">
-        <i data-lucide="layers" class="w-4 h-4 text-[#00E699]"></i>
-        <span>Explorar Funcionalidades</span>
-      </a>
-    </div>
-
-    <!-- Social Proof Badge -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-xs text-slate-400">
-      <div class="flex -space-x-2 overflow-hidden">
-        <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#090D16] bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-[10px] text-white">LT</span>
-        <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#090D16] bg-gradient-to-tr from-pink-500 to-rose-600 flex items-center justify-center font-bold text-[10px] text-white">AR</span>
-        <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#090D16] bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center font-bold text-[10px] text-white">MS</span>
-        <span class="inline-block h-8 w-8 rounded-full ring-2 ring-[#090D16] bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center font-bold text-[10px] text-white">SL</span>
-      </div>
-      <div class="flex items-center gap-1.5">
-        <div class="flex text-amber-400">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-        </div>
-        <span><strong>4.9 / 5</strong> baseado em mais de 2.400 usuários ativos</span>
-      </div>
-    </div>
-
-    <!-- HERO PRODUCT SHOWCASE MOCKUP (Estilo NexuHR Browser/App Frame) -->
-    <div class="mt-14 relative max-w-5xl mx-auto">
-      <div class="nexus-card p-3 sm:p-4 bg-[#0F1422]/90 border border-slate-800 shadow-2xl relative overflow-hidden group">
-        <!-- Top Window Header -->
-        <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/5 px-2">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
-            <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
-            <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
-            <span class="ml-3 text-[11px] font-mono text-slate-400">financas.app • painel proativo</span>
-          </div>
-          <span class="text-[10px] bg-emerald-500/10 text-[#00E699] px-2 py-0.5 rounded-full border border-[#00E699]/20 font-semibold">
-            Status: Saudável
-          </span>
-        </div>
-
-        <!-- Dashboard Preview Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-left">
-          <!-- Card 1: Patrimônio -->
-          <div class="p-4 rounded-2xl bg-gradient-to-br from-indigo-950/40 to-transparent border border-indigo-500/20">
-            <span class="text-[11px] text-slate-400 block mb-1">Patrimônio Consolidado</span>
-            <div class="text-2xl font-bold text-white tracking-tight">R$ 18.250,00</div>
-            <div class="flex items-center gap-1.5 text-xs text-[#00E699] font-medium mt-2">
-              <i data-lucide="trending-up" class="w-3.5 h-3.5"></i>
-              <span>+14.2% em relação ao mês anterior</span>
-            </div>
-          </div>
-
-          <!-- Card 2: Ritmo de Gastos -->
-          <div class="p-4 rounded-2xl bg-gradient-to-br from-emerald-950/30 to-transparent border border-emerald-500/20">
-            <div class="flex items-center justify-between mb-1">
-              <span class="text-[11px] text-slate-400">Ritmo de Gastos</span>
-              <span class="text-[10px] font-bold text-[#00E699] bg-[#00E699]/10 px-2 py-0.5 rounded-full">No Ritmo</span>
-            </div>
-            <div class="text-2xl font-bold text-white tracking-tight">R$ 84,20<span class="text-xs text-slate-400 font-normal"> /dia</span></div>
-            <div class="text-[11px] text-slate-300 mt-2">Queima orçamentária dentro da meta</div>
-          </div>
-
-          <!-- Card 3: Cartão Black -->
-          <div class="p-4 rounded-2xl bg-gradient-to-br from-purple-950/30 to-transparent border border-purple-500/20">
-            <span class="text-[11px] text-slate-400 block mb-1">Melhor Dia de Compra</span>
-            <div class="text-2xl font-bold text-purple-300 tracking-tight">Dia 26</div>
-            <div class="text-[11px] text-slate-300 mt-2">Até 40 dias para pagar na próx. fatura</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================== -->
-  <!-- STATS METRICS TICKER                           -->
-  <!-- ============================================== -->
-  <section class="border-y border-white/5 bg-[#0F1422]/60 py-10 px-6 relative z-10">
-    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">R$ 15M+</div>
-        <div class="text-xs text-slate-400 mt-1 font-medium">Patrimônio Gerenciado</div>
-      </div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-[#00E699] tracking-tight">2.400+</div>
-        <div class="text-xs text-slate-400 mt-1 font-medium">Usuários Ativos</div>
-      </div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">98.7%</div>
-        <div class="text-xs text-slate-400 mt-1 font-medium">Redução de Desperdícios</div>
-      </div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400 tracking-tight">4.9 / 5</div>
-        <div class="text-xs text-slate-400 mt-1 font-medium">Satisfação Média</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================== -->
-  <!-- INTERACTIVE FEATURES (Aba Estilo NexuHR)       -->
-  <!-- ============================================== -->
-  <section id="funcionalidades" class="py-20 px-6 max-w-6xl mx-auto relative z-10">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <span class="text-xs font-bold text-[#00E699] uppercase tracking-wider block mb-2">Recursos Revolucionários</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-        Tudo o que sua vida financeira precisa em um só lugar.
-      </h2>
-      <p class="text-sm text-slate-400 mt-3">
-        Inspirado na precisão matemática do iOS Swift e construído em React 18 e TypeScript de ponta a ponta.
-      </p>
-    </div>
-
-    <!-- Navigation Tabs Buttons -->
-    <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
-      <button class="feature-tab-btn active px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 text-slate-300" data-feature="pace">
-        <i data-lucide="activity" class="w-4 h-4 text-[#00E699]"></i>
-        <span>Ritmo de Gastos</span>
-      </button>
-
-      <button class="feature-tab-btn px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 text-slate-300" data-feature="cards">
-        <i data-lucide="credit-card" class="w-4 h-4 text-indigo-400"></i>
-        <span>Cartão Black & Parcelas</span>
-      </button>
-
-      <button class="feature-tab-btn px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 text-slate-300" data-feature="ai">
-        <i data-lucide="sparkles" class="w-4 h-4 text-purple-400"></i>
-        <span>IA Preditiva & Vampiro</span>
-      </button>
-
-      <button class="feature-tab-btn px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2 text-slate-300" data-feature="couple">
-        <i data-lucide="users" class="w-4 h-4 text-pink-400"></i>
-        <span>Modo Casal & Pix</span>
-      </button>
-    </div>
-
-    <!-- Dynamic Showcase Panel -->
-    <div class="nexus-card p-6 sm:p-10 border border-slate-800 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-      <!-- Coluna Esquerda: Textos & Bullets -->
-      <div class="space-y-5 text-left">
-        <span id="featTag" class="text-xs font-bold text-[#00E699] uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full border border-[#00E699]/20 inline-block">
-          Motor de Burn Rate
+    <div class="relative mx-auto max-w-6xl text-center">
+      <!-- Badge NexusHR -->
+      <div class="mb-6 flex justify-center">
+        <span class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm font-semibold text-[#00E699] shadow-[0_0_12px_rgba(0,230,153,0.15)]">
+          <i data-lucide="rocket" class="w-3.5 h-3.5 text-[#00E699]"></i>
+          <span>Finanças 2.0 com IA Preditiva & Modo Casal</span>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#00E699]"></i>
         </span>
-        <h3 id="featHeadline" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          Nunca mais seja pego de surpresa no fim do mês
-        </h3>
-        <p id="featDescription" class="text-sm text-slate-400 leading-relaxed font-normal">
-          O algoritmo de Ritmo de Gastos calcula a sua queima orçamentária diária ideal e alerta antes que você ultrapasse o teto previsto.
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="mb-6 text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1] max-w-5xl mx-auto">
+        Tudo o que o seu patrimônio{' '}
+        <span class="relative whitespace-nowrap">
+          <span class="relative z-10 gradient-nexus-text">precisa</span>
+        </span>
+        , numa só plataforma
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mx-auto mb-10 max-w-2xl text-lg sm:text-xl text-slate-400 leading-relaxed font-normal">
+        Marketing de si mesmo, controle de queima diária (Burn Rate), auditoria de assinaturas e divisão no casal — integrados e sincronizados em tempo real.
+      </p>
+
+      <!-- CTA Buttons (Verde Mint em Destaque) -->
+      <div class="mb-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="/app" class="btn-nexus-mint group inline-flex w-full items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-bold shadow-lg shadow-emerald-500/20 sm:w-auto">
+          <span>Começar gratuitamente</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+        </a>
+        <a href="#funcionalidades" class="btn-nexus-dark inline-flex w-full items-center justify-center gap-2 rounded-xl px-8 py-4 text-base font-semibold shadow-sm sm:w-auto">
+          <i data-lucide="play" class="w-4 h-4 fill-[#00E699] text-[#00E699]"></i>
+          <span>Ver demonstração</span>
+        </a>
+      </div>
+
+      <!-- Sub-CTA Text -->
+      <p class="mb-14 text-center text-xs text-slate-500">
+        Sem cartão de crédito · 100% Seguro & Privado · Multiplataforma Web, Android e iOS
+      </p>
+
+      <!-- ============================================== -->
+      <!-- PRODUCT MOCKUP (Browser Window Estilo NexusOS) -->
+      <!-- ============================================== -->
+      <div class="relative mx-auto w-full max-w-4xl text-left">
+        <!-- Glow behind mockup -->
+        <div class="absolute -inset-4 rounded-3xl bg-emerald-500/10 blur-2xl"></div>
+
+        <div class="relative overflow-hidden rounded-2xl border border-slate-800/80 bg-[#0F1422] shadow-2xl shadow-emerald-500/10">
+          <!-- Window Chrome -->
+          <div class="flex items-center gap-2 border-b border-slate-800/60 bg-[#090D16] px-4 py-3">
+            <div class="h-3 w-3 rounded-full bg-red-500/80"></div>
+            <div class="h-3 w-3 rounded-full bg-amber-500/80"></div>
+            <div class="h-3 w-3 rounded-full bg-emerald-500/80"></div>
+            <div class="mx-auto flex h-6 w-64 items-center justify-center rounded-md bg-[#0F1422] px-3 text-xs text-slate-400 border border-slate-800 font-mono">
+              app.financas.io/dashboard
+            </div>
+          </div>
+
+          <!-- Mockup Body (Mini Sidebar + Content) -->
+          <div class="flex h-80 sm:h-96">
+            <!-- Mini Sidebar -->
+            <div class="flex w-14 flex-col items-center gap-3 border-r border-slate-800/60 bg-[#070A11] py-4">
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/20 text-[#00E699] border border-emerald-500/40">
+                <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+              </div>
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800/60">
+                <i data-lucide="trending-up" class="w-4 h-4"></i>
+              </div>
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800/60">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+              </div>
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800/60">
+                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+              </div>
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800/60">
+                <i data-lucide="users" class="w-4 h-4"></i>
+              </div>
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-800/60">
+                <i data-lucide="sparkles" class="w-4 h-4 text-[#00E699]"></i>
+              </div>
+            </div>
+
+            <!-- Main Mockup Content -->
+            <div class="flex-1 p-4 space-y-3 overflow-hidden bg-[#090D16]">
+              <!-- KPI Row -->
+              <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                <div class="rounded-lg border border-slate-800/80 bg-[#0F1422] p-2.5 sm:p-3">
+                  <p class="text-[9px] sm:text-[10px] text-slate-400">Patrimônio Líquido</p>
+                  <p class="text-xs sm:text-base font-bold text-white">R$ 27.932,50</p>
+                  <p class="text-[9px] font-medium text-[#00E699]">+14.2% no período</p>
+                </div>
+                <div class="rounded-lg border border-slate-800/80 bg-[#0F1422] p-2.5 sm:p-3">
+                  <p class="text-[9px] sm:text-[10px] text-slate-400">Ritmo Diário</p>
+                  <p class="text-xs sm:text-base font-bold text-white">R$ 180,65 /dia</p>
+                  <p class="text-[9px] font-medium text-[#00E699]">Status: No Ritmo</p>
+                </div>
+                <div class="rounded-lg border border-slate-800/80 bg-[#0F1422] p-2.5 sm:p-3">
+                  <p class="text-[9px] sm:text-[10px] text-slate-400">Modo Casal</p>
+                  <p class="text-xs sm:text-base font-bold text-white">R$ 4.623,30</p>
+                  <p class="text-[9px] font-medium text-slate-400">50/50 equilibrado</p>
+                </div>
+              </div>
+
+              <!-- Fake Bar Chart Area (Estilo NexusOS) -->
+              <div class="rounded-lg border border-slate-800/80 bg-[#0F1422] p-3">
+                <div class="mb-2 flex items-center justify-between">
+                  <p class="text-[10px] sm:text-xs font-semibold text-slate-200">Evolução do Patrimônio & Poupança</p>
+                  <div class="h-1.5 w-16 sm:w-24 rounded-full bg-slate-800">
+                    <div class="h-full w-12 sm:w-16 rounded-full bg-[#00E699]"></div>
+                  </div>
+                </div>
+                <div class="flex items-end gap-1 sm:gap-1.5 h-16 sm:h-20">
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 35%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 50%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 40%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 65%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 55%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 80%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 70%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 85%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 60%;"></div>
+                  <div class="flex-1 rounded-t bg-[#1E293B]" style="height: 90%;"></div>
+                  <div class="flex-1 rounded-t bg-[#00E699] shadow-sm shadow-emerald-500/50" style="height: 95%;"></div>
+                  <div class="flex-1 rounded-t bg-[#00E699] shadow-sm shadow-emerald-500/50" style="height: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Live Activity Feed -->
+              <div class="space-y-1.5 hidden sm:block">
+                <div class="flex items-center gap-2 rounded-md px-2 py-1 bg-[#0F1422]/50 border border-slate-800/40">
+                  <span class="text-xs">🟢</span>
+                  <span class="flex-1 text-[10px] text-slate-300 truncate">Aluguel Apartamento (R$ 1.800,00) pago com sucesso</span>
+                  <span class="text-[9px] text-slate-500">2m atrás</span>
+                </div>
+                <div class="flex items-center gap-2 rounded-md px-2 py-1 bg-[#0F1422]/50 border border-slate-800/40">
+                  <span class="text-xs">⚡</span>
+                  <span class="flex-1 text-[10px] text-slate-300 truncate">Detector Vampiro: assinatura Netflix confirmada sem aumento</span>
+                  <span class="text-[9px] text-slate-500">15m atrás</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================== -->
+      <!-- STATS BAR (100% NexusOS Grid)                  -->
+      <!-- ============================================== -->
+      <div class="mt-16 grid grid-cols-2 gap-6 rounded-2xl border border-slate-800/80 bg-[#0F1422] p-8 shadow-lg lg:grid-cols-4 max-w-5xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-white">R$ 15M+</div>
+          <div class="mt-1 text-sm text-slate-400">Patrimônio Gerenciado</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-[#00E699]">2.400+</div>
+          <div class="mt-1 text-sm text-slate-400">Usuários Ativos</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-white">98.7%</div>
+          <div class="mt-1 text-sm text-slate-400">Redução de Desperdícios</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-extrabold text-[#00E699]">4.9 / 5</div>
+          <div class="mt-1 text-sm text-slate-400">Satisfação Média</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- INTEGRATION & MULTIPLATFORM LOGOS              -->
+  <!-- ============================================== -->
+  <section class="border-y border-slate-800/60 bg-[#070A11] px-4 py-8">
+    <div class="max-w-5xl mx-auto text-center">
+      <p class="mb-6 text-xs font-semibold uppercase tracking-widest text-slate-500">
+        Disponível em todas as plataformas com sincronização instantânea
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 text-slate-400 text-sm font-semibold">
+        <div class="flex items-center gap-2 hover:text-white transition">
+          <i data-lucide="smartphone" class="w-4 h-4 text-[#00E699]"></i>
+          <span>Apple iOS</span>
+        </div>
+        <div class="flex items-center gap-2 hover:text-white transition">
+          <i data-lucide="tablet" class="w-4 h-4 text-[#00E699]"></i>
+          <span>Google Android</span>
+        </div>
+        <div class="flex items-center gap-2 hover:text-white transition">
+          <i data-lucide="globe" class="w-4 h-4 text-[#00E699]"></i>
+          <span>Web App PWA</span>
+        </div>
+        <div class="flex items-center gap-2 hover:text-white transition">
+          <i data-lucide="database" class="w-4 h-4 text-[#00E699]"></i>
+          <span>Supabase Cloud</span>
+        </div>
+        <div class="flex items-center gap-2 hover:text-white transition">
+          <i data-lucide="shield-check" class="w-4 h-4 text-[#00E699]"></i>
+          <span>Row Level Security (RLS)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- FEATURES WITH TABS (Estilo 1:1 NexusOS)         -->
+  <!-- ============================================== -->
+  <section id="funcionalidades" class="px-4 py-24 sm:px-6 lg:px-8 bg-[#090D16]">
+    <div class="mx-auto max-w-6xl">
+      <!-- Section Header -->
+      <div class="mb-14 text-center">
+        <span class="mb-3 inline-block rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-[#00E699]">
+          Funcionalidades
+        </span>
+        <h2 class="mb-4 text-3xl sm:text-5xl font-extrabold text-white">
+          Quatro motores. Um ecossistema completo.
+        </h2>
+        <p class="mx-auto max-w-2xl text-base sm:text-lg text-slate-400">
+          Elimine planilhas complexas e apps cheios de anúncios. Cada módulo foi projetado para agir em harmonia pelo seu futuro financeiro.
+        </p>
+      </div>
+
+      <!-- Feature Tabs (NexusOS Button Bar) -->
+      <div class="mb-8 flex flex-wrap justify-center gap-2 sm:gap-3">
+        <button onclick="selectFeature(0)" class="feature-tab-button inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold bg-[#00E699] text-slate-950 shadow-lg shadow-emerald-500/20 transition-all">
+          <i data-lucide="activity" class="w-4 h-4"></i>
+          <span>Ritmo de Gastos</span>
+        </button>
+        <button onclick="selectFeature(1)" class="feature-tab-button inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold border border-slate-800 bg-[#0F1422] text-slate-300 hover:border-emerald-500/40 hover:text-white transition-all">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Efeito Borboleta CDI</span>
+        </button>
+        <button onclick="selectFeature(2)" class="feature-tab-button inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold border border-slate-800 bg-[#0F1422] text-slate-300 hover:border-emerald-500/40 hover:text-white transition-all">
+          <i data-lucide="zap" class="w-4 h-4"></i>
+          <span>Detector Vampiro</span>
+        </button>
+        <button onclick="selectFeature(3)" class="feature-tab-button inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold border border-slate-800 bg-[#0F1422] text-slate-300 hover:border-emerald-500/40 hover:text-white transition-all">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Modo Casal & Pix</span>
+        </button>
+      </div>
+
+      <!-- Feature Content Panel -->
+      <div class="grid gap-8 rounded-3xl border border-slate-800/80 bg-[#0F1422] p-8 lg:grid-cols-2 lg:items-center lg:p-12 shadow-2xl">
+        <!-- Left: Text & Bullets -->
+        <div>
+          <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-[#00E699]">
+            <i data-lucide="activity" class="w-6 h-6 text-[#00E699]"></i>
+          </div>
+          <h3 id="featHeadline" class="mb-3 text-2xl sm:text-3xl font-extrabold text-white">
+            Ritmo de Gastos Diário (Burn Rate Preditivo)
+          </h3>
+          <p id="featDescription" class="mb-6 text-base sm:text-lg text-slate-400">
+            Saiba exatamente quanto pode gastar hoje sem estourar o orçamento do mês. Nosso algoritmo recalcula seu teto diário automaticamente após cada transação.
+          </p>
+          <ul id="featList" class="space-y-3">
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#00E699]"></i>
+              <span>Cálculo dinâmico de teto diário restante</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#00E699]"></i>
+              <span>Alerta inteligente de ritmo acelerado</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#00E699]"></i>
+              <span>Controle de queima antes do fechamento da fatura</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#00E699]"></i>
+              <span>Equilíbrio entre despesas fixas e variáveis</span>
+            </li>
+            <li class="flex items-center gap-3 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#00E699]"></i>
+              <span>Projeção automática para o último dia do mês</span>
+            </li>
+          </ul>
+          <div class="mt-8">
+            <a href="/app" class="btn-nexus-mint inline-flex items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold shadow-lg shadow-emerald-500/20">
+              <span>Experimentar no App</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Illustration Card -->
+        <div class="relative flex items-center justify-center">
+          <div class="relative w-full overflow-hidden rounded-2xl border border-slate-800 bg-[#090D16] p-6 shadow-xl">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-slate-800">
+              <span id="featCardTag" class="text-xs font-mono text-[#00E699]">Módulo Orçamentário</span>
+              <span class="text-[10px] text-slate-500">Live Preview</span>
+            </div>
+            <div class="p-4 rounded-xl bg-[#0F1422] border border-slate-800 mb-4">
+              <p id="featMetricLabel" class="text-xs text-slate-400">Ritmo Diário Ideal</p>
+              <h4 id="featMetricVal" class="text-2xl font-extrabold text-white mt-1">R$ 180,65 /dia</h4>
+              <p id="featMetricBadge" class="text-xs text-[#00E699] font-medium mt-1">Status: No Ritmo Ideal</p>
+            </div>
+            <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-2.5">
+              <i data-lucide="sparkles" class="w-4 h-4 text-[#00E699] flex-shrink-0"></i>
+              <p class="text-xs text-emerald-300 font-medium">Algoritmo preditivo atualizado automaticamente com cada despesa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- HOW IT WORKS (Estilo 1:1 NexusOS)              -->
+  <!-- ============================================== -->
+  <section id="como-funciona" class="bg-[#070A11] px-4 py-24 border-y border-slate-800/60 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl text-center">
+      <span class="mb-3 inline-block rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-[#00E699]">
+        Como funciona
+      </span>
+      <h2 class="mb-4 text-3xl sm:text-5xl font-extrabold text-white">
+        No controle em menos de 2 minutos
+      </h2>
+      <p class="text-base sm:text-lg text-slate-400 mb-16">
+        Sem planilhas complexas. Sem manuais longos. Só clareza e resultados financeiros.
+      </p>
+
+      <div class="relative grid gap-8 md:grid-cols-3 text-left">
+        <!-- Connecting Line -->
+        <div class="absolute left-0 right-0 top-7 hidden h-0.5 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-emerald-500/30 md:block mx-[16%] z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-[#00E699] shadow-md ring-4 ring-[#090D16]">
+            <i data-lucide="credit-card" class="w-6 h-6"></i>
+            <span class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#0F1422] border border-slate-700 text-[10px] font-black text-[#00E699]">01</span>
+          </div>
+          <h3 class="mb-2 font-bold text-white text-lg">Cadastre Contas & Cartões</h3>
+          <p class="text-sm text-slate-400">Adicione suas contas, limites e datas de fechamento em segundos ou importe seus dados.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-[#00E699] shadow-md ring-4 ring-[#090D16]">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+            <span class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#0F1422] border border-slate-700 text-[10px] font-black text-[#00E699]">02</span>
+          </div>
+          <h3 class="mb-2 font-bold text-white text-lg">Ative os Motores de IA</h3>
+          <p class="text-sm text-slate-400">O sistema calcula o ritmo de queima diária e audita aumentos ocultos de assinaturas.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="relative mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-[#00E699] shadow-md ring-4 ring-[#090D16]">
+            <i data-lucide="trending-up" class="w-6 h-6"></i>
+            <span class="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#0F1422] border border-slate-700 text-[10px] font-black text-[#00E699]">03</span>
+          </div>
+          <h3 class="mb-2 font-bold text-white text-lg">Multiplique seu Patrimônio</h3>
+          <p class="text-sm text-slate-400">Acompanhe suas metas de poupança com rendimento CDI e acerte as contas no casal sem atrito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- PRICING SECTION (Estilo 1:1 NexusOS)           -->
+  <!-- ============================================== -->
+  <section id="precos" class="px-4 py-24 sm:px-6 lg:px-8 bg-[#090D16]">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-12 text-center">
+        <span class="mb-3 inline-block rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-[#00E699]">
+          Preços
+        </span>
+        <h2 class="mb-4 text-3xl sm:text-5xl font-extrabold text-white">
+          Simples, justo e transparente
+        </h2>
+        <p class="mb-8 text-base sm:text-lg text-slate-400">
+          Sem surpresas. Sem anúncios invasivos. Sem venda dos seus dados.
         </p>
 
-        <!-- Bullets List -->
-        <ul id="featBullets" class="space-y-3 pt-2">
-          <li class="flex items-start gap-2.5 text-xs text-slate-300">
-            <span class="p-1 rounded-full bg-emerald-500/20 text-[#00E699] shrink-0 mt-0.5">
-              <i data-lucide="check" class="w-3 h-3"></i>
+        <!-- Billing Toggle -->
+        <div class="inline-flex items-center gap-2 rounded-xl border border-slate-800 bg-[#0F1422] p-1.5">
+          <button id="billingMonthlyBtn" class="rounded-lg px-4 py-2 text-sm font-semibold text-slate-400 hover:text-white transition-all">
+            Mensal
+          </button>
+          <button id="billingAnnualBtn" class="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-bold bg-emerald-500/20 text-[#00E699] border border-emerald-500/40 shadow transition-all">
+            <span>Anual</span>
+            <span class="rounded-full bg-[#00E699] px-2 py-0.5 text-xs font-extrabold text-slate-950">
+              -20% OFF
             </span>
-            <span>Cálculo automático de Burn Rate por dia</span>
-          </li>
-          <li class="flex items-start gap-2.5 text-xs text-slate-300">
-            <span class="p-1 rounded-full bg-emerald-500/20 text-[#00E699] shrink-0 mt-0.5">
-              <i data-lucide="check" class="w-3 h-3"></i>
-            </span>
-            <span>Indicadores de status: No Ritmo, Atenção e Acelerado</span>
-          </li>
-          <li class="flex items-start gap-2.5 text-xs text-slate-300">
-            <span class="p-1 rounded-full bg-emerald-500/20 text-[#00E699] shrink-0 mt-0.5">
-              <i data-lucide="check" class="w-3 h-3"></i>
-            </span>
-            <span>Projeção de saldo no último dia do mês</span>
-          </li>
-          <li class="flex items-start gap-2.5 text-xs text-slate-300">
-            <span class="p-1 rounded-full bg-emerald-500/20 text-[#00E699] shrink-0 mt-0.5">
-              <i data-lucide="check" class="w-3 h-3"></i>
-            </span>
-            <span>Conversão de gastos em "Horas de Vida" trabalhadas</span>
-          </li>
-        </ul>
+          </button>
+        </div>
+      </div>
 
-        <div class="pt-4">
-          <a href="/app" class="inline-flex items-center gap-2 text-xs font-semibold text-[#00E699] hover:text-emerald-300 transition">
-            <span>Testar essa funcionalidade no App</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      <!-- Plan Cards Grid -->
+      <div class="grid gap-8 lg:grid-cols-3">
+        <!-- Plan 1: Starter -->
+        <div class="flex flex-col rounded-2xl border border-slate-800/80 bg-[#0F1422] p-8 text-slate-100 shadow-md">
+          <div class="mb-6">
+            <h3 class="mb-1 text-xl font-bold text-white">Starter</h3>
+            <p class="text-sm text-slate-400">Essencial para quem está organizando os primeiros gastos.</p>
+          </div>
+          <div class="mb-8">
+            <span class="text-5xl font-extrabold text-white">Grátis</span>
+            <span class="block text-xs text-slate-400 mt-2">Para sempre · Recursos básicos</span>
+          </div>
+          <ul class="mb-8 flex-1 space-y-3">
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Até 2 contas bancárias</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Transações ilimitadas</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Dashboard essencial</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Sincronização em nuvem básica</span>
+            </li>
+          </ul>
+          <a href="/app" class="block w-full rounded-xl bg-slate-800 py-3.5 text-center text-sm font-bold text-slate-200 hover:bg-slate-700 transition">
+            Começar Grátis
+          </a>
+        </div>
+
+        <!-- Plan 2: Pro Individual (Mais Popular com Borda Esmeralda) -->
+        <div class="relative flex flex-col rounded-2xl border-2 border-emerald-500/60 bg-[#0F1422] p-8 text-white shadow-2xl shadow-emerald-500/10 scale-[1.02]">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span class="rounded-full bg-[#00E699] px-4 py-1 text-xs font-bold uppercase tracking-wide text-slate-950 shadow-lg">
+              ⭐ Mais Popular
+            </span>
+          </div>
+          <div class="mb-6">
+            <h3 class="mb-1 text-xl font-bold text-white">Pro Individual</h3>
+            <p class="text-sm text-slate-400">Inteligência completa para acelerar seu patrimônio.</p>
+          </div>
+          <div class="mb-8">
+            <span id="proPrice" class="text-5xl font-extrabold text-white">R$ 15,90</span>
+            <span id="proSub" class="block text-xs text-slate-400 mt-2">/mês (faturado R$ 190,80/ano)</span>
+          </div>
+          <ul class="mb-8 flex-1 space-y-3">
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Contas & cartões ilimitados</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span><strong>Ritmo de Gastos Diário (Burn Rate)</strong></span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span><strong>Simulador Efeito Borboleta & CDI</strong></span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span><strong>Detector de Assinaturas Vampiro</strong></span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Previsão de Fluxo de Caixa (30 dias)</span>
+            </li>
+          </ul>
+          <a href="/app" class="btn-nexus-mint block w-full rounded-xl py-3.5 text-center text-sm font-bold shadow-lg shadow-emerald-500/20">
+            Assinar Pro Individual
+          </a>
+        </div>
+
+        <!-- Plan 3: Modo Casal -->
+        <div class="flex flex-col rounded-2xl border border-slate-800/80 bg-[#0F1422] p-8 text-slate-100 shadow-md">
+          <div class="mb-6">
+            <h3 class="mb-1 text-xl font-bold text-white">Casal Pro</h3>
+            <p class="text-sm text-slate-400">Tudo do Pro para duas pessoas dividirem despesas sem briga.</p>
+          </div>
+          <div class="mb-8">
+            <span id="couplePrice" class="text-5xl font-extrabold text-white">R$ 23,90</span>
+            <span id="coupleSub" class="block text-xs text-slate-400 mt-2">/mês (faturado R$ 286,80/ano)</span>
+          </div>
+          <ul class="mb-8 flex-1 space-y-3">
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Tudo do Plano Pro Individual</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span><strong>2 Contas independentes sincronizadas</strong></span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span><strong>Espaço Compartilhado com Acerto Pix</strong></span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Divisão 50/50 ou proporcional à renda</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm text-slate-300">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-[#00E699]"></i>
+              <span>Privacidade individual preservada</span>
+            </li>
+          </ul>
+          <a href="/app" class="block w-full rounded-xl bg-slate-800 py-3.5 text-center text-sm font-bold text-slate-200 hover:bg-slate-700 transition">
+            Experimentar Casal Pro
           </a>
         </div>
       </div>
 
-      <!-- Coluna Direita: Mockup Visual da Feature -->
-      <div class="p-6 rounded-3xl bg-[#090D16] border border-slate-800 shadow-xl space-y-4 text-left">
-        <div class="flex items-center justify-between pb-3 border-b border-white/5">
-          <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-indigo-600/20 text-indigo-400 flex items-center justify-center font-bold">
-              <i data-lucide="cpu" class="w-4 h-4"></i>
-            </div>
-            <span id="featMockupTitle" class="text-xs font-bold text-white">Ritmo de Gastos Ativo</span>
-          </div>
-          <span id="featMockupBadge" class="text-[11px] font-semibold text-[#00E699] bg-[#00E699]/10 px-2.5 py-0.5 rounded-full border border-[#00E699]/20">
-            No Ritmo Ideal
-          </span>
+      <!-- Warranty Banner -->
+      <div class="mt-10 rounded-2xl border border-slate-800/80 bg-[#0F1422] p-6 text-center sm:text-left flex flex-col sm:flex-row items-center gap-4">
+        <div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-[#00E699]">
+          <i data-lucide="shield" class="w-6 h-6"></i>
         </div>
-
-        <div class="space-y-1">
-          <span class="text-[11px] text-slate-400">Ritmo Diário Atual:</span>
-          <div id="featMockupBurn" class="text-2xl font-extrabold text-white tracking-tight">R$ 84,20 / dia</div>
+        <div class="flex-1">
+          <p class="font-bold text-white">Garantia Incondicional de 30 Dias</p>
+          <p class="text-sm text-slate-400">Se você não identificar economia e mais tranquilidade nas suas contas nos primeiros 30 dias, devolvemos seu dinheiro integralmente.</p>
         </div>
-
-        <div class="p-3 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-between text-xs">
-          <span class="text-slate-400">Projeção de Fim de Mês:</span>
-          <span id="featMockupProjected" class="font-bold text-[#00E699]">R$ 2.450,00</span>
-        </div>
-
-        <div class="p-3 rounded-2xl bg-emerald-950/20 border border-emerald-500/20 text-xs text-emerald-300 flex items-center gap-2">
-          <i data-lucide="shield-check" class="w-4 h-4 text-[#00E699] shrink-0"></i>
-          <span id="featMockupStatus">Consumo dentro do teto estipulado</span>
-        </div>
+        <a href="/app" class="whitespace-nowrap text-sm font-semibold text-[#00E699] hover:underline">
+          Começar teste grátis &rarr;
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ============================================== -->
-  <!-- STEPS SECTION ("Como Funciona em 3 Passos")     -->
+  <!-- TESTIMONIALS (Estilo 1:1 NexusOS)              -->
   <!-- ============================================== -->
-  <section id="como-funciona" class="py-20 px-6 max-w-6xl mx-auto relative z-10 border-t border-white/5">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-2">Simplicidade & Controle</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-        Como funciona em apenas 3 passos
-      </h2>
-      <p class="text-sm text-slate-400 mt-3 font-normal">
-        Sem planilhas confusas, sem burocracia. Comece a transformar sua relação com o dinheiro hoje.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-      <!-- Step 01 -->
-      <div class="nexus-card p-6 border border-slate-800 space-y-4 relative group">
-        <div class="text-3xl font-extrabold text-indigo-500/40">01</div>
-        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center font-bold">
-          <i data-lucide="user-plus" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Crie sua conta em 2 minutos</h3>
-        <p class="text-xs text-slate-400 leading-relaxed font-normal">
-          Defina seu perfil, informe sua meta orçamentária e acesse instantaneamente no iPhone, Android ou Web.
-        </p>
-      </div>
-
-      <!-- Step 02 -->
-      <div class="nexus-card p-6 border border-slate-800 space-y-4 relative group">
-        <div class="text-3xl font-extrabold text-[#00E699]/30">02</div>
-        <div class="w-10 h-10 rounded-xl bg-[#00E699]/10 text-[#00E699] flex items-center justify-center font-bold">
-          <i data-lucide="zap" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Ative os Motores Preditivos</h3>
-        <p class="text-xs text-slate-400 leading-relaxed font-normal">
-          O app calcula automaticamente seu Ritmo de Gastos, monitora datas de fechamento do cartão e audita assinaturas.
-        </p>
-      </div>
-
-      <!-- Step 03 -->
-      <div class="nexus-card p-6 border border-slate-800 space-y-4 relative group">
-        <div class="text-3xl font-extrabold text-purple-500/40">03</div>
-        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold">
-          <i data-lucide="trending-up" class="w-5 h-5"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Multiplique seu Patrimônio</h3>
-        <p class="text-xs text-slate-400 leading-relaxed font-normal">
-          Acompanhe o rendimento a 100% do CDI nas suas metas e veja o poder dos juros compostos com o Efeito Borboleta.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================== -->
-  <!-- PRICING SECTION                                -->
-  <!-- ============================================== -->
-  <section id="precos" class="py-20 px-6 max-w-6xl mx-auto relative z-10 border-t border-white/5 text-center">
-    <div class="max-w-2xl mx-auto mb-10">
-      <span class="text-xs font-bold text-[#00E699] uppercase tracking-wider block mb-2">Planos Transparentes</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-        Planos desenhados para cada momento de vida
-      </h2>
-      <p class="text-sm text-slate-400 mt-3 font-normal">
-        Comece gratuitamente e evolua conforme seu patrimônio e suas metas crescem.
-      </p>
-
-      <!-- Toggle Mensal / Anual -->
-      <div class="flex items-center justify-center gap-3 mt-8">
-        <span class="text-xs font-semibold text-slate-300">Mensal</span>
-        <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" id="billingToggle" class="sr-only peer" checked>
-          <div class="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#00E699]"></div>
-        </label>
-        <span class="text-xs font-semibold text-slate-300 flex items-center gap-1.5">
-          <span>Anual</span>
-          <span class="text-[10px] font-bold text-[#090D16] bg-[#00E699] px-2 py-0.5 rounded-full">
-            -20% OFF
-          </span>
+  <section id="depoimentos" class="bg-[#070A11] px-4 py-24 border-y border-slate-800/60 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <div class="mb-16 text-center">
+        <span class="mb-3 inline-block rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-[#00E699]">
+          Depoimentos
         </span>
-      </div>
-    </div>
-
-    <!-- Pricing Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left items-stretch">
-      <!-- Plano Starter -->
-      <div class="nexus-card p-6 border border-slate-800 flex flex-col justify-between">
-        <div>
-          <h3 class="text-lg font-bold text-white">Starter</h3>
-          <p class="text-xs text-slate-400 mt-1">Ideal para começar e organizar os primeiros gastos.</p>
-          <div class="my-6">
-            <span class="text-3xl sm:text-4xl font-extrabold text-white">R$ 0</span>
-            <span class="text-xs text-slate-400">/sempre grátis</span>
-          </div>
-          <ul class="space-y-3 text-xs text-slate-300 border-t border-white/5 pt-5">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Até 3 contas e cartões</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Extrato e busca de lançamentos</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> 1 Meta com simulador CDI</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Acesso Web e Mobile</li>
-          </ul>
-        </div>
-        <a href="/app" class="mt-8 block text-center py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-xs border border-white/10 transition">
-          Começar Grátis
-        </a>
-      </div>
-
-      <!-- Plano Pro (Destaque Estilo NexuHR) -->
-      <div class="nexus-card p-6 border-2 border-[#00E699] shadow-2xl shadow-[#00E699]/10 flex flex-col justify-between relative bg-gradient-to-b from-[#0F1422] to-[#090D16]">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00E699] text-[#090D16] font-extrabold text-[10px] uppercase px-3 py-0.5 rounded-full shadow-md">
-          Mais Popular
-        </div>
-        <div>
-          <h3 class="text-lg font-bold text-white">Pro Individual</h3>
-          <p class="text-xs text-slate-400 mt-1">Para quem deseja controle total e inteligência artificial.</p>
-          <div class="my-6">
-            <span id="proPriceAmount" class="text-3xl sm:text-4xl font-extrabold text-[#00E699]">R$ 23</span>
-            <span id="proPricePeriod" class="text-xs text-slate-400">/mês faturado anualmente</span>
-          </div>
-          <ul class="space-y-3 text-xs text-slate-200 border-t border-white/5 pt-5">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Contas e cartões ilimitados</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> <strong>Motor de Ritmo de Gastos</strong></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> <strong>Simulador Efeito Borboleta</strong></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> <strong>Detector Vampiro de Assinaturas</strong></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Previsão de Fluxo a 30 dias</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Escudo de Privacidade biométrico</li>
-          </ul>
-        </div>
-        <a href="/app" class="mt-8 block text-center py-3 rounded-xl btn-mint-nexus font-bold text-xs">
-          Assinar Plano Pro
-        </a>
-      </div>
-
-      <!-- Plano Casal / Família -->
-      <div class="nexus-card p-6 border border-slate-800 flex flex-col justify-between">
-        <div>
-          <h3 class="text-lg font-bold text-white">Casal & Parceria</h3>
-          <p class="text-xs text-slate-400 mt-1">Para 2 pessoas dividirem despesas sem brigas.</p>
-          <div class="my-6">
-            <span id="familyPriceAmount" class="text-3xl sm:text-4xl font-extrabold text-white">R$ 39</span>
-            <span id="familyPricePeriod" class="text-xs text-slate-400">/mês faturado anualmente</span>
-          </div>
-          <ul class="space-y-3 text-xs text-slate-300 border-t border-white/5 pt-5">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> 2 contas PRO conectadas</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> <strong>Modo Casal & Divisão Inteligente</strong></li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Acerto de contas Pix integrado</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Privacidade individual preservada</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#00E699]"></i> Suporte prioritário via WhatsApp</li>
-          </ul>
-        </div>
-        <a href="/app" class="mt-8 block text-center py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold text-xs border border-white/10 transition">
-          Iniciar Modo Casal
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================== -->
-  <!-- TESTIMONIALS SECTION                           -->
-  <!-- ============================================== -->
-  <section id="depoimentos" class="py-20 px-6 max-w-6xl mx-auto relative z-10 border-t border-white/5">
-    <div class="text-center max-w-2xl mx-auto mb-14">
-      <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-2">Comunidade & Resultados</span>
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-        Quem usa, recomenda e não troca.
-      </h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-      <!-- Depoimento 1 -->
-      <div class="nexus-card p-6 border border-slate-800 space-y-4">
-        <div class="flex text-amber-400">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-        </div>
-        <p class="text-xs text-slate-300 leading-relaxed italic">
-          "O recurso de Ritmo de Gastos mudou completamente meu mês. Agora eu sei exatamente quanto posso gastar por dia sem estourar o orçamento."
+        <h2 class="mb-4 text-3xl sm:text-5xl font-extrabold text-white">
+          O que dizem quem já usa o Finanças
+        </h2>
+        <p class="text-base sm:text-lg text-slate-400">
+          Mais de 2.400 pessoas recuperaram a tranquilidade com o dinheiro.
         </p>
-        <div class="flex items-center justify-between pt-2 border-t border-white/5">
-          <div>
-            <h4 class="text-xs font-bold text-white">Guilherme Prado</h4>
-            <span class="text-[11px] text-slate-400">Engenheiro de Software</span>
-          </div>
-          <span class="text-[10px] font-bold text-[#00E699] bg-emerald-500/10 px-2 py-0.5 rounded-full">
-            +R$ 1.400 poupados
-          </span>
-        </div>
       </div>
 
-      <!-- Depoimento 2 -->
-      <div class="nexus-card p-6 border border-slate-800 space-y-4">
-        <div class="flex text-amber-400">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-        </div>
-        <p class="text-xs text-slate-300 leading-relaxed italic">
-          "O Modo Casal salvou nossas conversas sobre dinheiro em casa. Dividimos o mercado e as contas fixas sem atrito e acertamos por Pix em um segundo."
-        </p>
-        <div class="flex items-center justify-between pt-2 border-t border-white/5">
-          <div>
-            <h4 class="text-xs font-bold text-white">Mariana & Lucas</h4>
-            <span class="text-[11px] text-slate-400">Usuários do Plano Casal</span>
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <div class="flex flex-col rounded-2xl border border-slate-800/80 bg-[#0F1422] p-8 shadow-sm transition hover:border-emerald-500/40">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <span class="rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-0.5 text-xs font-bold text-[#00E699]">
+              -R$ 380/mês
+            </span>
           </div>
-          <span class="text-[10px] font-bold text-[#00E699] bg-emerald-500/10 px-2 py-0.5 rounded-full">
-            Zero atrito
-          </span>
+          <p class="mb-6 flex-1 text-slate-300 leading-relaxed text-sm">
+            "O Detector Vampiro encontrou duas assinaturas que eu nem lembrava que estavam debitando na fatura. Cancelei em 2 minutos e já paguei a assinatura anual do app só com essa economia."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-[#00E699] font-bold text-sm">
+              RM
+            </div>
+            <div>
+              <div class="font-semibold text-white text-sm">Rodrigo Mendes</div>
+              <div class="text-xs text-slate-400">Engenheiro de Software</div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- Depoimento 3 -->
-      <div class="nexus-card p-6 border border-slate-800 space-y-4">
-        <div class="flex text-amber-400">
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-          <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
-        </div>
-        <p class="text-xs text-slate-300 leading-relaxed italic">
-          "O Detector Vampiro encontrou 2 assinaturas anuais que eu nem lembrava que estavam debitando no meu cartão. Economizei mais de R$ 600 só nisso."
-        </p>
-        <div class="flex items-center justify-between pt-2 border-t border-white/5">
-          <div>
-            <h4 class="text-xs font-bold text-white">Carla Vasconcelos</h4>
-            <span class="text-[11px] text-slate-400">Designer & Produtora</span>
+        <!-- Testimonial 2 -->
+        <div class="flex flex-col rounded-2xl border border-slate-800/80 bg-[#0F1422] p-8 shadow-sm transition hover:border-emerald-500/40">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <span class="rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-0.5 text-xs font-bold text-[#00E699]">
+              Fim das Brigas
+            </span>
           </div>
-          <span class="text-[10px] font-bold text-[#00E699] bg-emerald-500/10 px-2 py-0.5 rounded-full">
-            -R$ 640 em drenos
-          </span>
+          <p class="mb-6 flex-1 text-slate-300 leading-relaxed text-sm">
+            "O Modo Casal salvou nosso casamento de discussões sobre fatura de cartão. Cada um lança o que pagou no mercado ou contas da casa e no fim do mês o acerto é via Pix em 1 clique."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-teal-500/20 text-teal-300 font-bold text-sm">
+              CA
+            </div>
+            <div>
+              <div class="font-semibold text-white text-sm">Camila & André</div>
+              <div class="text-xs text-slate-400">Usuários do Casal Pro</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="flex flex-col rounded-2xl border border-slate-800/80 bg-[#0F1422] p-8 shadow-sm transition hover:border-emerald-500/40">
+          <div class="mb-4 flex items-center justify-between">
+            <div class="flex text-amber-400 gap-1">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <span class="rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-0.5 text-xs font-bold text-[#00E699]">
+              +R$ 12k Poupança
+            </span>
+          </div>
+          <p class="mb-6 flex-1 text-slate-300 leading-relaxed text-sm">
+            "O Ritmo Diário de Gastos mudou a minha mentalidade. Em vez de olhar saldo do banco e achar que sou rico, eu olho quanto posso gastar hoje. Bati minha meta de reserva antes do prazo."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/20 text-purple-300 font-bold text-sm">
+              FS
+            </div>
+            <div>
+              <div class="font-semibold text-white text-sm">Felipe Soares</div>
+              <div class="text-xs text-slate-400">Designer de Produto</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================== -->
-  <!-- FAQ ACCORDION SECTION                          -->
+  <!-- FAQ ACCORDION (Estilo 1:1 NexusOS)             -->
   <!-- ============================================== -->
-  <section id="faq" class="py-20 px-6 max-w-4xl mx-auto relative z-10 border-t border-white/5 text-left">
-    <div class="text-center max-w-xl mx-auto mb-12">
-      <span class="text-xs font-bold text-[#00E699] uppercase tracking-wider block mb-2">Tire suas dúvidas</span>
-      <h2 class="text-3xl font-extrabold text-white tracking-tight">Perguntas Frequentes</h2>
-    </div>
-
-    <div class="space-y-3">
-      <!-- FAQ 1 -->
-      <div class="faq-item nexus-card border border-slate-800 p-4 rounded-2xl cursor-pointer">
-        <div class="faq-header flex items-center justify-between">
-          <h4 class="text-sm font-semibold text-white">Preciso cadastrar cartão de crédito para testar?</h4>
-          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform"></i>
-        </div>
-        <div class="faq-content text-xs text-slate-400 mt-2 leading-relaxed">
-          Não! O plano Starter é gratuito para sempre e não exige nenhum dado financeiro ou cartão para começar.
-        </div>
+  <section id="faq" class="px-4 py-24 sm:px-6 lg:px-8 bg-[#090D16]">
+    <div class="mx-auto max-w-3xl">
+      <div class="mb-12 text-center">
+        <span class="mb-3 inline-block rounded-full bg-slate-800 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-slate-300">
+          FAQ
+        </span>
+        <h2 class="mb-4 text-3xl sm:text-5xl font-extrabold text-white">
+          Perguntas Frequentes
+        </h2>
+        <p class="text-base text-slate-400">
+          Tem alguma dúvida específica? Veja as respostas mais comuns abaixo.
+        </p>
       </div>
 
-      <!-- FAQ 2 -->
-      <div class="faq-item nexus-card border border-slate-800 p-4 rounded-2xl cursor-pointer">
-        <div class="faq-header flex items-center justify-between">
-          <h4 class="text-sm font-semibold text-white">Como funciona a segurança e privacidade dos meus dados?</h4>
-          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform"></i>
+      <div class="space-y-3">
+        <!-- FAQ 1 -->
+        <div class="faq-item rounded-xl border border-slate-800/80 bg-[#0F1422] transition hover:border-emerald-500/40">
+          <button class="faq-button w-full px-6 py-4.5 text-left flex items-center justify-between gap-3">
+            <span class="font-semibold text-slate-100 text-sm sm:text-base">Meus dados bancários e de senhas ficam seguros?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-400 leading-relaxed">
+            Sim, segurança é o pilar central. O Finanças utiliza criptografia de ponta a ponta e Row Level Security (RLS) no Supabase. Nenhuma instituição tem acesso aos seus dados financeiros e nós não vendemos seus dados para anunciantes.
+          </div>
         </div>
-        <div class="faq-content text-xs text-slate-400 mt-2 leading-relaxed">
-          Seus dados são protegidos por criptografia de ponta a ponta e políticas rígidas de Row Level Security (RLS) no PostgreSQL. Ninguém, nem mesmo nossa equipe, tem acesso aos seus lançamentos financeiros.
-        </div>
-      </div>
 
-      <!-- FAQ 3 -->
-      <div class="faq-item nexus-card border border-slate-800 p-4 rounded-2xl cursor-pointer">
-        <div class="faq-header flex items-center justify-between">
-          <h4 class="text-sm font-semibold text-white">Como funciona o Modo Casal?</h4>
-          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform"></i>
+        <!-- FAQ 2 -->
+        <div class="faq-item rounded-xl border border-slate-800/80 bg-[#0F1422] transition hover:border-emerald-500/40">
+          <button class="faq-button w-full px-6 py-4.5 text-left flex items-center justify-between gap-3">
+            <span class="font-semibold text-slate-100 text-sm sm:text-base">Posso usar o mesmo login no iPhone, Android e Computador?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-400 leading-relaxed">
+            Com certeza! O Finanças é uma plataforma unificada. O que você registrar no aplicativo Web será sincronizado em tempo real com seu app iOS e Android.
+          </div>
         </div>
-        <div class="faq-content text-xs text-slate-400 mt-2 leading-relaxed">
-          O Modo Casal cria um espaço compartilhado para despesas em comum (mercado, moradia, contas). As contas pessoais de cada parceiro continuam 100% privadas. O app calcula apenas a compensação líquida de quem deve para quem.
-        </div>
-      </div>
 
-      <!-- FAQ 4 -->
-      <div class="faq-item nexus-card border border-slate-800 p-4 rounded-2xl cursor-pointer">
-        <div class="faq-header flex items-center justify-between">
-          <h4 class="text-sm font-semibold text-white">Funciona tanto no celular quanto no computador?</h4>
-          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-400 transition-transform"></i>
+        <!-- FAQ 3 -->
+        <div class="faq-item rounded-xl border border-slate-800/80 bg-[#0F1422] transition hover:border-emerald-500/40">
+          <button class="faq-button w-full px-6 py-4.5 text-left flex items-center justify-between gap-3">
+            <span class="font-semibold text-slate-100 text-sm sm:text-base">Como funciona o cálculo do "Ritmo de Gastos"?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-400 leading-relaxed">
+            O algoritmo subtrai suas despesas fixas e despesas já realizadas do seu teto orçamentário mensal e divide o valor restante pela quantidade exata de dias que faltam para o mês acabar, avisando se seu ritmo está seguro ou acelerado.
+          </div>
         </div>
-        <div class="faq-content text-xs text-slate-400 mt-2 leading-relaxed">
-          Sim! O Finanças é uma aplicação moderna desenvolvida com Capacitor e React. Você pode usá-lo direto no navegador ou instalá-lo no Android e iPhone com sincronização instantânea em nuvem.
+
+        <!-- FAQ 4 -->
+        <div class="faq-item rounded-xl border border-slate-800/80 bg-[#0F1422] transition hover:border-emerald-500/40">
+          <button class="faq-button w-full px-6 py-4.5 text-left flex items-center justify-between gap-3">
+            <span class="font-semibold text-slate-100 text-sm sm:text-base">No Modo Casal, meu parceiro tem acesso às minhas contas privadas?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-400 leading-relaxed">
+            Não. No Modo Casal, vocês compartilham apenas os itens que marcarem explicitamente como "Despesa Conjunta". Suas contas particulares, investimentos e gastos pessoais continuam 100% invisíveis para a outra pessoa.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item rounded-xl border border-slate-800/80 bg-[#0F1422] transition hover:border-emerald-500/40">
+          <button class="faq-button w-full px-6 py-4.5 text-left flex items-center justify-between gap-3">
+            <span class="font-semibold text-slate-100 text-sm sm:text-base">Como cancelo se não gostar?</span>
+            <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content px-6 pb-5 text-sm text-slate-400 leading-relaxed">
+            Você pode cancelar a qualquer momento em 1 clique nas configurações do seu perfil, sem perguntas ou burocracia. Além disso, se cancelar dentro de 30 dias, devolvemos 100% do seu pagamento.
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================== -->
-  <!-- FINAL CTA BANNER                               -->
+  <!-- FINAL IMMERSIVE CTA (Estilo 1:1 NexusOS)       -->
   <!-- ============================================== -->
-  <section class="py-20 px-6 max-w-5xl mx-auto relative z-10 text-center">
-    <div class="nexus-card p-10 sm:p-14 border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 via-[#0F1422] to-[#090D16] relative overflow-hidden shadow-2xl">
-      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#00E699]/10 rounded-full blur-3xl pointer-events-none"></div>
+  <section class="px-4 py-24 sm:px-6 lg:px-8 bg-[#090D16]">
+    <div class="mx-auto max-w-5xl rounded-3xl border border-emerald-500/30 bg-gradient-to-b from-[#0F1422] to-[#070A11] p-10 sm:p-16 text-center relative overflow-hidden shadow-2xl">
+      <!-- Glow -->
+      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight max-w-2xl mx-auto mb-4">
-        Pronto para revolucionar a sua vida financeira?
-      </h2>
-      <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto mb-8 font-normal">
-        Junte-se a milhares de pessoas que controlam seus gastos com clareza, inteligência e tranquilidade.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="/app" class="w-full sm:w-auto btn-mint-nexus py-3.5 px-8 rounded-xl font-bold text-sm shadow-xl flex items-center justify-center gap-2">
-          <span>Acessar o App Gratuitamente</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
+      <div class="relative z-10 max-w-2xl mx-auto">
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-6">
+          Pronto para ter controle absoluto do seu dinheiro?
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mb-8">
+          Junte-se a milhares de pessoas que já trocaram o estresse financeiro por inteligência preditiva e tranquilidade diária.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="/app" class="btn-nexus-mint w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold flex items-center justify-center gap-2 shadow-xl shadow-emerald-500/25">
+            <span>Começar Gratuitamente Agora</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <p class="mt-4 text-xs text-slate-500">
+          Acesso instantâneo sem necessidade de cartão de crédito.
+        </p>
       </div>
     </div>
   </section>
@@ -654,63 +835,27 @@
   <!-- ============================================== -->
   <!-- FOOTER                                         -->
   <!-- ============================================== -->
-  <footer class="border-t border-white/5 bg-[#090D16] py-12 px-6 relative z-10 text-xs text-slate-400">
-    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-left">
-      <div>
-        <div class="flex items-center gap-2 mb-3">
-          <div class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">
-            <i data-lucide="wallet" class="w-4 h-4"></i>
-          </div>
-          <span class="font-bold text-white text-sm">Finanças</span>
+  <footer class="border-t border-slate-800/60 bg-[#070A11] px-6 py-12 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <div class="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-500/20 text-[#00E699] border border-emerald-500/40">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-[#00E699] fill-[#00E699]"></i>
         </div>
-        <p class="text-slate-500 text-[11px] leading-relaxed">
-          Plataforma de gestão financeira inteligente com tecnologia multiplataforma iOS, Android e Web.
-        </p>
+        <span class="font-bold text-white text-sm">Finanças PRO OS</span>
       </div>
-
-      <div>
-        <h5 class="font-bold text-white mb-3">Produto</h5>
-        <ul class="space-y-2">
-          <li><a href="#funcionalidades" class="hover:text-white transition">Ritmo de Gastos</a></li>
-          <li><a href="#funcionalidades" class="hover:text-white transition">Cartão Black & Parcelas</a></li>
-          <li><a href="#funcionalidades" class="hover:text-white transition">IA Preditiva What-If</a></li>
-          <li><a href="#funcionalidades" class="hover:text-white transition">Modo Casal & Pix</a></li>
-        </ul>
+      <p class="text-center sm:text-left">
+        &copy; 2026 Finanças Inc. Todos os direitos reservados. Plataforma segura e criptografada.
+      </p>
+      <div class="flex items-center gap-6 text-slate-400">
+        <a href="#funcionalidades" class="hover:text-white transition">Funcionalidades</a>
+        <a href="#precos" class="hover:text-white transition">Preços</a>
+        <a href="#faq" class="hover:text-white transition">FAQ</a>
+        <a href="/app" class="hover:text-[#00E699] transition font-semibold">Web App</a>
       </div>
-
-      <div>
-        <h5 class="font-bold text-white mb-3">Plataforma</h5>
-        <ul class="space-y-2">
-          <li><a href="/app" class="hover:text-white transition">Aplicativo Web</a></li>
-          <li><a href="#como-funciona" class="hover:text-white transition">Android (Capacitor)</a></li>
-          <li><a href="#como-funciona" class="hover:text-white transition">iOS Swift</a></li>
-          <li><a href="#precos" class="hover:text-white transition">Planos e Preços</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h5 class="font-bold text-white mb-3">Segurança & Legal</h5>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-white transition">Políticas de Privacidade</a></li>
-          <li><a href="#" class="hover:text-white transition">Termos de Uso</a></li>
-          <li><a href="#" class="hover:text-white transition">Criptografia AES-256</a></li>
-          <li>
-            <span class="inline-flex items-center gap-1.5 text-[10px] text-[#00E699] font-semibold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-[#00E699]/20 mt-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#00E699] animate-pulse"></span>
-              Sistemas Operacionais
-            </span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
-      <div>&copy; 2026 Finanças. Todos os direitos reservados.</div>
-      <div>Desenvolvido com padrão de design NexuHR & NexusOS.</div>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Custom Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
