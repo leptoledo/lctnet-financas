@@ -1,5 +1,5 @@
 /**
- * Finanças Landing Page - Interatividade Estilo NexusHR / NexusOS
+ * Finanças Landing Page - Interatividade Estilo NexusHR Light Theme
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,18 +17,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Dados das Abas de Funcionalidades (Estilo NexusOS)
+  // 3. Captura do Formulário de E-mail do Hero
+  const heroEmailForm = document.getElementById('heroEmailForm');
+  const heroEmailInput = document.getElementById('heroEmailInput');
+  if (heroEmailForm && heroEmailInput) {
+    heroEmailForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = heroEmailInput.value.trim();
+      if (email) {
+        window.location.href = `/app?email=${encodeURIComponent(email)}`;
+      } else {
+        window.location.href = '/app';
+      }
+    });
+  }
+
+  // 4. Dados das Abas de Funcionalidades (Light Clean)
   const featuresData = [
     {
       id: 'pacing',
       headline: 'Ritmo de Gastos Diário (Burn Rate Preditivo)',
-      description: 'Saiba exatamente quanto pode gastar hoje sem estourar o orçamento do mês. Nosso algoritmo recalcula seu teto diário automaticamente após cada transação.',
+      description: 'Saiba exatamente quanto pode gastar hoje sem estourar o orçamento do mês. Nosso algoritmo recalcula seu teto diário automaticamente após cada transação registrada.',
       items: [
         'Cálculo dinâmico de teto diário restante',
-        'Alerta inteligente de ritmo acelerado',
+        'Alerta inteligente de ritmo acelerado antes de fechar o mês',
         'Controle de queima antes do fechamento da fatura',
-        'Equilíbrio entre despesas fixas e variáveis',
-        'Projeção automática para o último dia do mês'
+        'Equilíbrio perfeito entre despesas fixas e variáveis',
+        'Projeção patrimonial automática para o último dia do mês'
       ],
       previewTitle: 'Ritmo de Gastos em Tempo Real',
       metricLabel: 'Ritmo Diário Ideal',
@@ -94,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const featHeadline = document.getElementById('featHeadline');
   const featDescription = document.getElementById('featDescription');
   const featList = document.getElementById('featList');
-  const featPreviewTitle = document.getElementById('featPreviewTitle');
   const featMetricLabel = document.getElementById('featMetricLabel');
   const featMetricVal = document.getElementById('featMetricVal');
   const featMetricBadge = document.getElementById('featMetricBadge');
@@ -103,9 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.selectFeature = function(index) {
     featureTabs.forEach((tab, i) => {
       if (i === index) {
-        tab.className = 'feature-tab-button inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold bg-[#00E699] text-slate-950 shadow-lg shadow-emerald-500/20 transition-all';
+        tab.className = 'feature-tab-button inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold btn-coral-primary shadow-sm transition-all';
       } else {
-        tab.className = 'feature-tab-button inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold border border-slate-800 bg-[#0F1422] text-slate-300 hover:border-emerald-500/40 hover:text-white transition-all';
+        tab.className = 'feature-tab-button inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold border border-slate-200 bg-white text-slate-700 hover:border-rose-300 hover:text-slate-900 transition-all';
       }
     });
 
@@ -114,16 +128,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (featHeadline) featHeadline.textContent = data.headline;
     if (featDescription) featDescription.textContent = data.description;
-    if (featPreviewTitle) featPreviewTitle.textContent = data.previewTitle;
     if (featMetricLabel) featMetricLabel.textContent = data.metricLabel;
     if (featMetricVal) featMetricVal.textContent = data.metricVal;
-    if (featMetricBadge) featMetricBadge.textContent = data.metricBadge;
+    if (featMetricBadge) {
+      featMetricBadge.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5"></i> ${data.metricBadge}`;
+    }
     if (featCardTag) featCardTag.textContent = data.cardTag;
 
     if (featList) {
       featList.innerHTML = data.items.map(item => `
-        <li class="flex items-center gap-3 text-sm text-slate-300">
-          <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#00E699]"></i>
+        <li class="flex items-center gap-3 text-sm text-slate-700">
+          <i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0 text-[#FF3366]"></i>
           <span>${item}</span>
         </li>
       `).join('');
@@ -131,7 +146,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 4. Seletor de Planos Mensal / Anual (-20% OFF)
+  // 5. Calculadora ROI Interativa
+  const roiSlider = document.getElementById('roiSlider');
+  const sliderValLabel = document.getElementById('sliderValLabel');
+  const roiResult = document.getElementById('roiResult');
+
+  if (roiSlider && sliderValLabel && roiResult) {
+    const updateROI = () => {
+      const val = parseFloat(roiSlider.value);
+      sliderValLabel.textContent = `R$ ${val.toLocaleString('pt-BR')} /mês`;
+      
+      // Simulação: economiza 35% de gastos supérfluos investidos a 10.5% a.a. por 3 anos
+      const poupancaMensal = val * 0.35;
+      const meses = 36;
+      const taxaMensal = Math.pow(1 + 0.105, 1 / 12) - 1;
+      
+      // Montante com aportes mensais: PMT * (((1 + i)^n - 1) / i)
+      const montante = poupancaMensal * ((Math.pow(1 + taxaMensal, meses) - 1) / taxaMensal);
+      roiResult.textContent = `R$ ${Math.round(montante).toLocaleString('pt-BR')},00`;
+    };
+
+    roiSlider.addEventListener('input', updateROI);
+    updateROI();
+  }
+
+  // 6. Seletor de Planos Mensal / Anual (-20% OFF)
   const billingMonthlyBtn = document.getElementById('billingMonthlyBtn');
   const billingAnnualBtn = document.getElementById('billingAnnualBtn');
   const proPrice = document.getElementById('proPrice');
@@ -141,8 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (billingMonthlyBtn && billingAnnualBtn) {
     billingMonthlyBtn.addEventListener('click', () => {
-      billingMonthlyBtn.className = 'rounded-lg px-4 py-2 text-sm font-bold bg-emerald-500/20 text-[#00E699] border border-emerald-500/40 shadow transition-all';
-      billingAnnualBtn.className = 'inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold text-slate-400 hover:text-white transition-all';
+      billingMonthlyBtn.className = 'inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold bg-rose-50 text-[#E11D48] border border-rose-200 shadow-sm transition-all';
+      billingAnnualBtn.className = 'rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-all';
       
       if (proPrice) proPrice.textContent = 'R$ 19,90';
       if (proSub) proSub.textContent = '/mês cobrado mensalmente';
@@ -151,8 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     billingAnnualBtn.addEventListener('click', () => {
-      billingAnnualBtn.className = 'inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-bold bg-emerald-500/20 text-[#00E699] border border-emerald-500/40 shadow transition-all';
-      billingMonthlyBtn.className = 'rounded-lg px-4 py-2 text-sm font-semibold text-slate-400 hover:text-white transition-all';
+      billingAnnualBtn.className = 'inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold bg-rose-50 text-[#E11D48] border border-rose-200 shadow-sm transition-all';
+      billingMonthlyBtn.className = 'rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-600 hover:text-slate-900 transition-all';
       
       if (proPrice) proPrice.textContent = 'R$ 15,90';
       if (proSub) proSub.textContent = '/mês (faturado R$ 190,80/ano)';
@@ -161,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 5. Accordion de FAQ
+  // 7. Accordion de FAQ
   document.querySelectorAll('.faq-button').forEach(btn => {
     btn.addEventListener('click', () => {
       const parent = btn.closest('.faq-item');

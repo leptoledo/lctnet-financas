@@ -1,28 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ==========================================================================
-   Finanças Landing Page - 100% NexusOS / NexuHR Design System
-   Paleta: Deep Midnight Navy (#090D16), Obsidian Surface (#0F1422),
-   Accent: Mint Green Neon (#00E699), Border: Slate 800 (#1E293B)
+   Finanças Landing Page - 100% Light Theme SaaS (Inspirado em NexusHR)
+   Paleta: Branco Puro (#FFFFFF), Slate (#0F172A, #475569), 
+   Accent Coral/Rose (#FF3366 / #E11D48), Violeta (#8B5CF6)
    ========================================================================== */
 
 :root {
-  --bg-dark: #090D16;
-  --bg-surface: #0F1422;
-  --bg-card: #0F1422;
-  --bg-alt: #070A11;
-  --border-subtle: #1E293B;
-  --border-emerald: rgba(16, 185, 129, 0.4);
+  --bg-main: #FFFFFF;
+  --bg-subtle: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-dark: #0A0D14;
   
-  /* NexusHR Colors */
-  --emerald-neon: #00E699;
-  --emerald-hover: #05DF8A;
-  --emerald-glow: rgba(0, 230, 153, 0.25);
+  /* Borders */
+  --border-light: #E2E8F0;
+  --border-subtle: #F1F5F9;
+  --border-coral: rgba(255, 51, 102, 0.35);
+  
+  /* Brand Coral & Rose Colors */
+  --coral-main: #FF3366;
+  --coral-dark: #E11D48;
+  --coral-light: #FFF1F2;
+  --coral-border: #FECDD3;
+  --coral-glow: rgba(255, 51, 102, 0.22);
+  
+  /* Accent Violet */
+  --violet-accent: #8B5CF6;
+  --violet-light: #F5F3FF;
   
   /* Text */
-  --text-main: #FFFFFF;
-  --text-muted: #94A3B8;
-  --text-dim: #64748B;
+  --text-main: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-light: #94A3B8;
 }
 
 * {
@@ -36,76 +46,85 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg-dark);
-  color: #F8FAFC;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
   line-height: 1.5;
   overflow-x: hidden;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   -webkit-font-smoothing: antialiased;
 }
 
-/* Background Subtle Grid Pattern (Estilo Exato NexusHR) */
-.nexus-grid-bg {
+/* Background Soft Glow (Estilo Exato NexusHR Light) */
+.hero-radial-glow {
+  background: 
+    radial-gradient(circle at 50% -20%, rgba(255, 51, 102, 0.12) 0%, rgba(139, 92, 246, 0.05) 45%, rgba(255, 255, 255, 0) 70%),
+    #FFFFFF;
+}
+
+/* Subtle Light Grid Pattern */
+.light-grid-bg {
   background-image: 
-    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
+    linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
-/* Nexus Glows */
-.nexus-glow-emerald {
-  box-shadow: 0 0 25px -3px var(--emerald-glow);
-}
-
-/* Gradient Text */
-.gradient-nexus-text {
-  background: linear-gradient(135deg, #34D399 0%, #2DD4BF 50%, #00E699 100%);
+/* Gradient Text Coral to Violet */
+.gradient-coral-violet {
+  background: linear-gradient(135deg, #FF3366 0%, #E11D48 45%, #8B5CF6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Primary Button (Mint Green Neon #00E699) */
-.btn-nexus-mint {
-  background-color: #00E699;
-  color: #020617;
+/* Primary Coral Button */
+.btn-coral-primary {
+  background: linear-gradient(135deg, #FF3366 0%, #E11D48 100%);
+  color: #FFFFFF;
   font-weight: 700;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 25px -5px rgba(0, 230, 153, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -4px rgba(255, 51, 102, 0.35);
 }
 
-.btn-nexus-mint:hover {
-  background-color: #05DF8A;
+.btn-coral-primary:hover {
+  background: linear-gradient(135deg, #FF2459 0%, #D0143E 100%);
   transform: translateY(-2px);
-  box-shadow: 0 15px 30px -5px rgba(0, 230, 153, 0.35);
+  box-shadow: 0 16px 32px -4px rgba(255, 51, 102, 0.45);
 }
 
-/* Secondary Button (Dark Obsidian Card with Slate Border) */
-.btn-nexus-dark {
-  background-color: #0F1422;
-  border: 1px solid #1E293B;
-  color: #CBD5E1;
+/* Secondary Clean Button */
+.btn-clean-secondary {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
   font-weight: 600;
   transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.btn-nexus-dark:hover {
-  background-color: rgba(30, 41, 59, 0.8);
-  border-color: rgba(16, 185, 129, 0.4);
-  color: #FFFFFF;
+.btn-clean-secondary:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  color: var(--text-main);
+  transform: translateY(-1px);
 }
 
-/* Cards */
-.nexus-card {
-  background-color: #0F1422;
-  border: 1px solid rgba(30, 41, 59, 0.8);
-  border-radius: 16px;
-  transition: all 0.25s ease;
+/* Modern Card Shadow */
+.clean-card-shadow {
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
 }
 
-.nexus-card:hover {
-  border-color: rgba(16, 185, 129, 0.4);
-  transform: translateY(-2px);
+/* Floating Badges Shadow */
+.floating-card-shadow {
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.15), 0 0 1px 1px rgba(15, 23, 42, 0.05);
+}
+
+/* Mockup Window Border & Glow */
+.mockup-window {
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 30px 70px -15px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(226, 232, 240, 0.8);
 }
 
 /* FAQ Accordion */
@@ -113,7 +132,7 @@ body {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), opacity 0.25s ease;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), opacity 0.25s ease;
 }
 
 .faq-item.active .faq-content {
@@ -126,12 +145,21 @@ body {
   transform: rotate(180deg);
 }
 
-/* Animations */
-@keyframes floatSlow {
+/* Floating Animations */
+@keyframes floatSubtleUp {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-8px); }
 }
 
-.animate-float-slow {
-  animation: floatSlow 6s ease-in-out infinite;
+@keyframes floatSubtleDown {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+
+.animate-float-up {
+  animation: floatSubtleUp 5s ease-in-out infinite;
+}
+
+.animate-float-down {
+  animation: floatSubtleDown 6s ease-in-out infinite;
 }
