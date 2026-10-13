@@ -19,7 +19,15 @@ if (fs.existsSync(landingPublicDir)) {
   console.error('❌ Diretório landing não encontrado:', landingPublicDir);
 }
 
-// 2. Sincronizar também com o root dist/ caso Vercel rode a partir da raiz
+// 2. Duplicar pasta assets para a raiz também (dist/assets) para tolerância a falhas de caminhos relativos/absolutos
+const appAssetsDir = path.join(appDistDir, 'app', 'assets');
+const fallbackAssetsDir = path.join(appDistDir, 'assets');
+if (fs.existsSync(appAssetsDir)) {
+  fs.cpSync(appAssetsDir, fallbackAssetsDir, { recursive: true });
+  console.log('✅ Assets duplicados em apps/app/dist/assets para suporte universal');
+}
+
+// 3. Sincronizar com o root dist/ caso Vercel rode a partir da raiz
 try {
   if (!fs.existsSync(rootDistDir)) {
     fs.mkdirSync(rootDistDir, { recursive: true });

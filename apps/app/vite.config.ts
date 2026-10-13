@@ -4,7 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: process.env.VITE_APP_BASE || '/app/',
   resolve: {
     alias: {
       '@financas/core': path.resolve(__dirname, '../../packages/core/src'),

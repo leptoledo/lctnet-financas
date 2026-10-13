@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const email = heroEmailInput.value.trim();
       if (email) {
-        window.location.href = `/app?email=${encodeURIComponent(email)}`;
+        window.location.href = `/app/?email=${encodeURIComponent(email)}`;
       } else {
-        window.location.href = '/app';
+        window.location.href = '/app/';
       }
     });
   }

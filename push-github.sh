@@ -16,8 +16,8 @@ git add apps packages scripts vercel.json package.json push-github.sh .gitignore
 if git diff --cached --quiet; then
   echo "ℹ️ Nenhuma nova alteração nos arquivos para commit (já commitado)."
 else
-  echo "💾 Criando commit com o redesign visual Light Theme oficial NexusHR (#FFFFFF, Coral #FF3366)..."
-  git commit -m "feat(landing): redesign light theme oficial NexusHR (#FFFFFF, Coral #FF3366, hero mockup flutuante)"
+  echo "💾 Criando commit com o redesign Light Theme e correção de assets do Painel SaaS..."
+  git commit -m "fix(app): corrigir carregamento de assets e roteamento do Painel SaaS + redesign light theme"
 fi
 
 # 4. Enviar para o repositório remoto

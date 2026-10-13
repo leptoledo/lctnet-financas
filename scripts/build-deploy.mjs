@@ -33,6 +33,14 @@ if (fs.existsSync(landingPublicDir)) {
   fs.cpSync(landingPublicDir, distDir, { recursive: true });
 }
 
+// 4. Garantir que a pasta assets exista tanto em dist/app/assets quanto em dist/assets
+const appAssetsDir = path.join(distDir, 'app', 'assets');
+const rootAssetsDir = path.join(distDir, 'assets');
+if (fs.existsSync(appAssetsDir)) {
+  fs.cpSync(appAssetsDir, rootAssetsDir, { recursive: true });
+  console.log('✅ Assets sincronizados em dist/assets e dist/app/assets');
+}
+
 console.log('✨ Build de produção pronto para a Vercel:');
 console.log('   🔗 /    -> Landing Page oficial');
 console.log('   🔗 /app -> Aplicação Finanças');
